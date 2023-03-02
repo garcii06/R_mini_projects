@@ -1,1 +1,1 @@
-# R_mini_projects
+# R mini projects
