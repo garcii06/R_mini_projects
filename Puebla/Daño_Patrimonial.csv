@@ -1,0 +1,245 @@
+fecha,danos,problema_principal,descripcion,monto
+2021-04-07,Semáforo,Derribado,Derribado,29179.03
+2021-04-12,Luminaria,Derribado,Derribado,20369.5
+2021-04-19,Chaleco balístico,Robado,"Robado, parcialidad",5000
+2021-04-07,Semáforo y señalética,Derribado,Derribado,26922.5
+2021-04-14,Árbol derribado,Derribado,Derribado,7169.6
+2021-04-14,Luminaria,Derribado,Poste cónico derribado,18395.73
+2021-04-16,Guardapeatón,Rayado,Ralladuras,1446.58
+2021-04-16,Radio de Policial,Robado,"Robado, parcialidad",4869.5
+2021-04-20,Árbol,Derribado,Derribado,1882.02
+2021-04-20,Señalétca,Dañado,Dañado al poste de 3 metros,2319.8100000000004
+2021-04-23,Guarnición,Demolido,Demolición,16606.940000000002
+2021-04-23,Árbol,Derribado,Derribado,4481
+2021-04-19,Poste de Luminaria,Derribado,Poste cónico derribado de 9 mts.,27774.940000000002
+2021-04-19,Semáforo de 3 luces,Derribado,Derribado,28344.85
+2021-04-23,Daño a vehículo oficial,Desprendido,Desprendimiento de pintura,200
+2021-04-23,Infraestructura Municipal,NA,Infraestructura Municipal,1000
+2021-04-30,Tuberías,NA,Infraestructura Municipal,1500
+2021-04-30,Teléfono Motorola,Robado,Robado,6493
+2021-08-17,Poste y sus componentes,Derribado,Derribado,32464.24
+2021-08-17,Camellón,Demolido,Demolición,1327.04
+2021-08-20,Radio,Dañado,Dañado,3895.5
+2021-08-11,Poste de alumbrado público,Desprendido,Desprendimiento de pintura,12997.99
+2021-08-03,Semáforo de pedestal de un cabezal,Raspado,Raspaduras,3977.67
+2021-08-20,Gurnición de camellón central,Raspado,Raspaduras,7083.68
+2021-08-06,Poste de alumbrado público,Derribado,Derribado,27774.940000000002
+2021-08-02,Semaforo de 3 luces,Derribado,Derribado,19703.2
+2021-08-04,2 bolardos,Demolido,Demolición,6855.79
+NA,"2 metros de barandal, guarnición",Demolido,Demolición,25719.6
+2021-08-19,Guarnición,Demolido,Demolición,3329.8
+2021-08-16,"1 guarda peatón, concreto hidráulico y banqueta",Derribado,Derribado,7313.52
+2021-08-25,Bolardo,Demolido,Demolición,2381.56
+2021-12-01,Guardapeaton y asfalto,Demolido,Demolición y colocacion,3436.4300000000003
+2021-12-22,Lámpara,Dañado,Daño a los componentes de un poste cónico de 9 metros,25335.82
+2021-12-14,"Dos árboles de 1.5 metros, y un árbol de 4 metros",Derribado,Derribados,8065.8
+2021-12-14,Señalamiento vertical,Derribado,Derribado,2319
+2021-12-07,Poste metalico y banderola,Derribado,Derribado,2319.8100000000004
+2021-12-02,Guardapeaton de concreto,Derribado,Derribado,3204.27
+2021-12-20,Lampara de Alumbrado Publico,Derribado,Derribada,25009.43
+2021-12-17,Mini parklet,Dañado,Daños estructurales,69600
+2021-12-16,Bolardo de metal,Derribado,Derribado,3170.57
+2021-12-01,Siete guardapeatones y una maceta,Derribado,Derribados,15657.39
+2021-12-17,Luminaria,Derribado,Derribada,19263.55
+2021-12-17,Banderola para peatones,Derribado,Derribada,2319.8100000000004
+2021-12-20,Bolardo de metal,Derribado,Derribado,3857.63
+2021-12-27,Dos bolardos y guarnicion,Demolido,Demolicion y colocacion,15430.51
+2021-12-28,Banderola,Derribado,Derribada,2319.8100000000004
+2021-01-08,Guarnición,Derribado,Derribada,3306
+2021-01-12,Luminaria,Derribado,Derribada,17476.75
+2021-01-13,Arbusto,Derribado,Derribado en su totalidad,1737.6
+2021-01-20,Camellóm central,Derribado,Derribado,2858.57
+2021-02-10,Guarda peatón,Retiro,Retiro de Bolardo,2899.71
+2021-02-11,Lámpara,Derribado,"1 Poste cónico percha, derribado",27774.940000000002
+2021-02-17,Lámpara,Derribado,"1 Poste cónico percha, derribado",27774.940000000002
+2021-02-17,Guarnición,Demolido,Demolición,3305.71
+2021-02-10,Lámpara,Derribado,"1 Poste cónico percha, derribado",27774.940000000002
+2021-02-03,Guarda peatón de metal,Retiro,Retiro de Bolardo,4400.44
+2021-02-12,Árbol,Derribado,Derribado,4481
+2021-07-02,Radio portátil,Dañado,Dañado y robado,6494
+2021-07-02,Semáforo de 3 luces,Derribado,Derribado,24602.69
+2021-07-02,Radio portátil,Dañado,Dañado y robado,3895.5
+2021-07-02,Semáforo de 3 luces de 30 centímetros,Derribado,Derribado,16205.2
+2021-07-06,Banqueta,Demolido,Demolición,24210.2
+2021-06-10,Semáforo de 3 luces,Derribado,Derribado,24602.69
+2021-07-13,Daño a espejo lateral de patrulla,Deteriorado,Deterioro,1837
+2021-07-19,Daño a radio,Robado,Robado,4869.5
+2021-07-02,Semáforo,Derribado,Derribado,16205.2
+2021-07-20,Vehículo oficial,Abollado,Abolladura,7500
+2021-07-23,Guarnición,Derribado,Concreto derribado,3889.18
+2021-05-01,Semáforo,Derribado,Derribado,24603
+2021-06-10,Banqueta,Demolido,Demolición de concreto 15x20x25,5232.33
+2021-06-17,Señalamiento,Demolido,Demolición de concreto 15x20x40,2319.8100000000004
+2021-06-17,Guarnición,Demolido,Demolición,12278.38
+2021-06-01,Radio de comunicación,Robado,Robado,3895.5
+2021-06-10,Cinta asfáltica,Demolido,Demolición de concreto 15x20x40,7709.39
+2021-06-02,Bolardo,Demolido,Demolición de concreto,13201.31
+2021-06-01,Postes de concreto,Derribado,Derribado,25670.75
+2021-06-17,Semáforo,Derribado,Derribado,19005.2
+2021-06-07,"Árbol, Palma Canaría",Derribado,Derribado,1792.4
+2021-06-07,Semáforo de 3 luces,Derribado,Derribado,26082.85
+2021-06-07,"Árbol, Alamillo",Derribado,Derribado,4032.9
+2021-06-09,Luminaria,Derribado,Derribada,22212.45
+2021-06-09,Semáforo led´s,Derribado,Derribado,19564
+2021-06-18,Bolardo metálico,Demolido,Demolición de concreto,3427.8900000000003
+2021-06-24,Señalética,Derribado,Derribo de poste,2319.8100000000004
+2021-03-01,3 Bolardos,Demolido,"Retiro de Bolardo, demolición",8699.130000000001
+2021-03-04,Poste de Alumbrado Público,Raspado,Raspaduras,6411.22
+2021-03-03,Poste de Alumbrado Público,NA,Poste cónico percha 9 mts.,20369.5
+2021-03-01,Poste de Alumbrado Público,NA,Poste cónico percha 9 mts.,13548.7
+2021-03-26,Guarnición,Demolido,Demolición de banqueta,23528.41
+2021-03-26,Semáforo de 3 luces,Derribado,Derribado,19564
+2021-03-26,Camellón central,Demolido,Demolición de banqueta,1652.86
+2021-05-25,Guarnición y carpeta asfáltica,Demolido,Demolición,6688.91
+2021-05-14,Señalética,Rayado,Ralladuras en pintura,2319.8100000000004
+2021-05-25,Camara de video vigilancia,Derribado,Derribada,70528
+2021-05-31,Daños a radio portátil,Robado,Robado,6493
+2021-05-13,Poste de alumbrado público,Rayado,Ralladura en su base,12592.69
+2021-05-17,Radio de comunicación,Robado,Robado,4869.5
+2021-05-11,Árbol,Derribado,Derribado,4481
+2021-05-26,Guarda peatones,Demolido,Demolición,12826.58
+2021-05-04,2 bolardos,Derribado,Derribados,6855.79
+2021-05-28,Árbol,Derribado,Derribado,4032.9
+2021-11-10,Guarnición 2 metros,Demolido,Demolición,8876.77
+2021-11-03,Poste Cónico Tipo percha,Derribado,Derribado,33835.94
+2021-11-23,Guarnición Banquetas,Demolido,Demolición,1340.22
+2021-11-03,Luminaria Poste,Derribado,Derribado,32849.159999999996
+2021-11-23,Banderola de Nomenclatura de Calle,Derribado,Derribado,2268.38
+2021-11-16,Señalamiento Vertical y Postes de 2x2,Derribado,Derribado,2319.8100000000004
+2021-11-04,Luminaria,Dañado,Dañada en su base,7314.8
+2021-11-30,Guarnición,Demolido,Demolición,1888.98
+2021-11-30,Poste Cónico de 3.5 Metros,Derribado,Derribado,11009.11
+2021-11-22,5 Bolardos de Metal,Demolido,Demolición,22175.629999999997
+2021-11-16,Árbol,Derribado,Derribado,8688
+2021-11-22,2 Guardapeatones de Fierro,Derribado,Derribados,7715.25
+2021-11-23,Poste de 11 Metros y componentes,Derribado,Derribado,28800.22
+2021-11-22,Poste de Luminaria Cónico circular 8 metros de altura,Derribado,Derribado,23708.66
+2021-11-30,Semáforo,Derribado,Derribado,49120.96
+2021-11-25,Luminaria,Derribado,Derribada,25709
+2021-11-29,Guarnición y Guardapeaton,Derribado,Derribado,3857.63
+2021-10-01,Fantasmas metálicos negros con reflejante amarillo,Derribado,Derribado,6855.79
+2021-10-01,Bolardos y concreto hidráulico,Derribado,Derribado,7333.39
+2021-10-05,Banderola,Dañado,Daño a los componentes de un poste de 9 metros,2853.4100000000003
+2021-10-28,Lámpara de Alumbrado Público,Dañado,Daño a los componentes de un poste de 9 metros,19181.95
+2021-10-29,Lámpara de Alumbrado Público,Dañado,Daño a los componentes de un poste de 9 metros,7314.8
+2021-09-29,Vehículo oficial,Abollado,Abolladura,15000
+2021-09-09,Radio,Deteriorado,Deterioro,3895.5
+2021-09-21,Chaleco,Deteriorado,Deteriorado,4500
+2021-09-24,Sistema para red de baja tensión,Dañado,Dañada,13510.49
+2021-09-29,Señalamiento vertical,Derribado,Derribado,6571.01
+2021-09-29,Guarnición,Demolido,Demolición,11835.69
+2021-09-30,Arma,Dañado,"Dañada , robada",2000
+2022-04-07,Cesto de Basura,Deteriorado,Deteriorado,2248
+2022-04-04,Poste Metálico,Derribado,Derribado,26678.17
+2022-04-01,Banderola,Derribado,Derribado,2319.8100000000004
+2022-04-08,Bolardo,Derribado,Derribado,3315.7799999999997
+2022-04-08,Luminaria,Derribado,Derribada,14838.7
+2022-04-11,Luminaria,Derribado,Derribada,21218.85
+2022-04-26,Semáforo,Deteriorado,Deteriorado en su base,8973.369999999999
+2022-04-22,Semáforo,Derribado,Derribado,18705.2
+2022-04-27,Guarnición,Dañado,Dañado en su estructura,1199.76
+2022-04-22,Semáforo Led,Derribado,Derribado,25813.67
+2022-04-18,Árbol,Derribado,Derribado,4811
+2022-04-20,Poste de Alumbrado Público,Derribado,Derribado,25527.27
+2022-04-21,Control de Semaforos,Deteriorado,Deteriorado,7826.72
+2022-04-22,Guarnición y Árbol,Derribado,Derribados,4811
+2022-04-22,Poste de Alumbrado Público,Derribado,Derribado,33457.659999999996
+2022-04-26,Poste de Alumbrado Público,Derribado,Derribado,27109.829999999998
+2022-01-26,Guarnición,Demolido,Demolición de Guarnición,1760.43
+2022-01-13,Poste de 9 Metros y 2 Lámparas,Derribado,Derribadas,29445.87
+2022-01-31,2 Cabezales de Luminaria,Derribado,Derribados,19498.06
+2022-01-14,Estructura Metálica,Demolido,Demolición de Banqueta,15930.27
+2022-01-31,Guarnición,Demolido,Demolición de Guarnición,4282.08
+2022-01-31,Señalamiento,Derribado,Derribado,2200
+2022-01-20,Guarnición de 3 metros,Demolido,Demolición de Guarnición,935.56
+2022-01-05,Muro de Contención,Demolido,Demolición de Concreto,3809.65
+2022-01-27,Luminaria,Derribado,Derribada,29380.1
+2022-01-07,Poste de Metal,Rayado,Rayaduras de pintura,300
+2022-01-03,Guarnición y Banqueta,Demolido,Demolición de Concreto,3006.04
+2022-01-24,Poste de 9 Metros,Derribado,Derribada,26079.73
+2022-01-14,Barra Metálica de Camellón Central,Derribado,Derribada,8729.61
+2022-01-13,Luminaria,Desprendido,Desprendimiento de Cables,3907.03
+2022-02-02,Árbol,Derribado,Derribado,7697.6
+2022-02-22,Luminaria,Derribado,Derribado,26450.59
+2022-02-22,Semáforo de 3 Luces Led´s de 30 centímetros,Derribado,Derribado,48511.7
+2022-02-17,3 Metros  de Guarnición,Derribado,Derribada,1170.81
+2022-02-01,Luminaria,Derribado,Derribada,23416.960000000003
+2022-02-08,Poste Metálico Cónico de 9 Metros,Derribado,Derribado,22496.85
+2022-02-01,Bolardo,Derribado,Derribado,3857.63
+2022-02-28,Árbol,Derribado,Derribado,4811
+2022-02-10,5 árboles,Derribado,Derribados,4811
+2022-02-01,Bolardo,Derribado,Derribado,3857.63
+2022-02-01,Bolardo,Derribado,Derribado,4191.929999999999
+2022-02-23,Luminaria Metálica,Derribado,Derribada,24133.45
+2022-02-25,Árbol,Derribado,Derribado,12508.6
+2022-02-14,Área Verde,Demolido,Demolida,7697.6
+2022-02-14,Guarnición y Concreto,Derribado,Derribada,2366.72
+2022-03-22,Árboles,Derribado,Derribados,8962.4
+2022-03-15,Poste de Camara de Seguridad,Derribado,Derribada,15428
+2022-03-15,Poste Metálico,Derribado,Derribado,31555.780000000002
+2022-03-15,Bote de Basura,Derribado,Derribados,3902.8300000000004
+2022-03-14,Paradero,Derribado,Derribado,37500.82
+2022-03-08,Guarnición y Árbol,Derribado,Derribados,5235.969999999999
+2022-03-15,Paradero de Bicicleta,Derribado,Derribados,32184.129999999997
+2022-03-02,Semáforo,Derribado,Derribado,63135.93
+2022-03-10,Poste Metálico,Derribado,Derribado,34247.78999999999
+2022-03-04,Poste Metetálico,Derribado,Derribado,24133.45
+2022-03-08,2 Guardapeatones y una Maceta,Demolido,Demolición de Concreto y golpes a la meceta,7715.25
+2022-03-10,Poste de Luz,Derribado,Derribado,27941.07
+2022-03-08,3 Bolardos,Demolido,Demolición,15477.81
+2022-03-24,Señalética,Doblado,Doblada su Estructura,2319.8100000000004
+2022-03-10,Guarnición,Demolido,Demolición de Concreto,1816.84
+2022-03-04,Guarnición,Demolido,Demolición de Concreto,836.9499999999999
+2022-03-22,Guardapeatón,Derribado,Derribado,2941.48
+2022-03-03,Banderola Metálica,Derribado,Derribado,2319.8100000000004
+2022-03-14,Guarnición,Demolido,Demolición,391.33
+2022-03-25,Señalética,Derribado,Derribada,2900
+2022-03-15,Bolardo,Derribado,Derribado,3857.63
+2022-03-10,Chaleco Balístico,Deteriorado,Deteriorado,3000
+2022-05-06,Guardapeatón y Pavimento,Demolido,Demolición,9805.230000000001
+2022-05-06,Magueyes y Guarnición,Derribado,Derribo y Raspaduras,5802.02
+2022-05-18,Luminaria,Derribado,Derribada,10657.8
+2022-05-12,Luminaria,Derribado,Derribada,25638.16
+2022-05-19,Guarnición,Rayado,Rayadura,636.2
+2022-05-18,Guarnición de Concreto y Monumento,Derribado,Derribada,3076.19
+2022-05-26,Poste de Alumbrado Público,Deteriorado,Deterioro en Poste,10503.949999999999
+2022-05-27,Luminaria,Derribado,Derribada,25318.84
+2022-05-20,Bolardo,Derribado,Derribado,3076.19
+2022-05-20,Poste de Alumbrado Público,Deteriorado,Deterioro en poste,16461.7
+2022-05-25,Poste de Alumbrado Público,Derribado,Derribado,23282.64
+2022-01-13,Camellón Central,Demolido,Demolición,2047.05
+2023-01-13,Señalética,Derribado,Derribado,2319.8100000000004
+2023-01-20,Muro,Demolido,Demolición,42677.99
+2023-01-06,Árbol,Derribado,Derribado,4811
+2023-01-06,Guarnición,Derribado,Derribado,6370.87
+2022-12-28,Poste,Derribado,Derribado,29207.23
+2023-01-10,Poste,Derribado,Derribado,19597.2
+2023-01-09,Poste de Alumbrado Público,Derribado,Derribado,21598.32
+2022-12-21,Poste,Derribado,Derribado,67895.4
+2023-01-17,Bolardo,Derribado,Derribado,4333.7
+2022-12-20,Árbol,Derribado,Derribado,4811
+2022-12-20,3 Rieles,Derribado,Derribados,2048.69
+2022-12-20,Bolardo,Derribado,Derribado,4619.13
+2023-01-12,Guarnición,Demolido,Demolición,5818.78
+2023-01-27,Caseta de Periódico,Derribado,Derribada,19355.7
+2023-01-10,Bolardo,Derribado,Derribado,8949.630000000001
+2023-01-10,Señalética,Derribado,Derribado,5455.06
+2022-12-20,Semáforo,Derribado,Derribado,18499.71
+2022-12-22,Poste,Derribado,Derribado,15409.89
+2023-01-23,Semáforo,Derribado,´Derribado,36910.4
+2023-01-13,Bolardo,Derribado,Derribado,7697.6900000000005
+2023-01-25,Árbol,Derribado,Derribado,5187
+2022-12-20,Semáforo,Derribado,Derribado,56655.71
+2023-01-25,Banderola,Derribado,Derribada,2727.53
+2023-01-25,3 Bolardos,Derribado,Derribados,8576.9
+2023-01-03,Árbol,Derribado,Derribado,4800.110000000001
+2023-01-26,Contenedor de Basura,Derribado,Derribado,10420.28
+2023-01-26,Poste,Derribado,Derribado,20808.8
+2023-01-11,Poste de Alumbrado Público,Derribado,Derribado,8714.8
+2022-01-11,Árbol,Derribado,Derribado,9622
+2023-01-25,Banderola,Derribado,Derribada,1544.27
+2023-01-24,Banqueta,Demolido,Demolición,698.4499999999999
+2023-01-31,Semáforo,Derribado,Derribado,29574.149999999998
+2023-01-25,Poste,Derribado,Derribado,13969.08
+2023-01-31,Señalética,Derribado,Derribado,1544.27
+2023-01-25,Estatúa,Derribado,Derribada,15000
