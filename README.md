@@ -16,6 +16,7 @@ The `Tidyverse` gives you all the flexibility and power to do full projects maki
 ## Mini projects Table of Contents
 The following mini projects are completely available:  
 - [Bob Ross 🎨](#bob-ross-)
+- [Pueblas patrimonial damage 🔥](#pueblas-patrimonial-damage-)
 
 ## 
 ### Bob Ross 🎨  
@@ -25,3 +26,11 @@ Web scraping of all the seasons from the program `The Joy of Painting` by Bob Ro
 Practice of:
  - Web Scraping
  - Transform Data
+
+### Pueblas patrimonial damage 🔥
+Web scraping and transformation of Pueblas pratrimonial damage since 2021.
+> Complementary data for the `Visualization` mini project using `Power BI`.   [Link](https://github.com/garcii06/Visualization_mini_projects/tree/main/Puebla%20Danios)  
+
+Practice of:
+ - ETL
+ - Web Scraping
