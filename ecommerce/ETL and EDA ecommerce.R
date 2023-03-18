@@ -66,16 +66,24 @@ Orders |>
             total_sales = n())
 
 ### Highest selling months in 2020? -----------------------------------------------------------
-Orders |> 
-  filter(year(order_date) == 2020) |> 
-  ggplot(aes(x = month(order_date), y = sales)) + 
-  geom_col() +
+Orders |>
+  group_by(month(order_date)) |> 
+  summarise(total_sales = sum(sales)) |>  
+  ggplot(aes(x = `month(order_date)`, y = total_sales)) + 
+  geom_col(aes(fill = total_sales)) +
   scale_x_continuous(breaks = c(1:12),
                      labels = c("Jan", "Feb", "Mar", "Apr", "May", "June",
-                                "July", "Aug", "Sept", "Oct", "Nov", "Dec")) +
-  labs(x = "Total Sales",
-       y = "Month Number",
-       title = "Monthly sales (2020)")
+                                "July", "Aug", "Sept", "Oct", "Nov", "Dec")) + 
+  labs(x = "",
+       y = "Total Sales",
+       title = "Monthly sales",
+       fill = "Sales") +
+  scale_fill_gradient2(low = "#3A5100",
+                       mid = "#51003A",
+                       high = "#003A51",
+                       midpoint = 60000)
+
+ggsave("Monthly sales.png", path = str_c(getwd(), "/Plots"))
 
 ### Profit Margin for each sale? --------------------------------------------------------------
 # We got scenarios where the profit margin is +50%, while also have several transactions with
@@ -117,11 +125,16 @@ Orders |>
   ggplot(aes(x = reorder(sub_category, -total_profit), y = total_sales, fill = total_profit)) +
   geom_col() +
   guides(x = guide_axis(angle = 35)) +
-  scale_fill_gradient(low = "#703d06",
-                      high = "#063970") + 
+  scale_fill_gradient2(low = "#3A5100",
+                      mid = "#51003A",
+                      high = "#003A51",
+                      midpoint = 10000,
+                      breaks = c(0, 10000 , 20000)) + 
   labs(x ="Product subcategory",
        y = "Total Sales",
        title = "Profit by Product Subcategory")
+
+ggsave("Profit by Subcategory.png", path = str_c(getwd(), "/Plots"))
 
 ### People from city/state shop the most? -----------------------------------------------------
 # California, New York and Washington are the most profitable states and have the highest amount of
@@ -148,9 +161,64 @@ Orders |>
   arrange(desc(total_profit), state)
 
 ## Other Questions ----------------------------------------------------------------------------
-# Most frequent returned items. By Customer, State-City, Region.
-# Total sells by Region.
-# Most common Ship Mode by Region, Customer.
-# Discount offered for the first order, and multiple orders.
-# Dates between sales for each customer. 
+### Returned Items ----------------------------------------------------------------------------
+# The most frequent orders returned by Region.
+# West suffers the most from returns.
+Returns |> 
+  inner_join(Orders, by = c("order_id" = "order_id")) |> 
+  group_by(region) |> 
+  summarise(orders_returned = n()) |> 
+  ggplot(aes(x = region, y = orders_returned)) +
+  geom_col() +
+  labs(x = "Region",
+       y = "Total orders returned",
+       title = "Orders returned by Region")
 
+# Total items returned by region.
+Returns |> 
+  inner_join(Orders, by = c("order_id" = "order_id")) |> 
+  group_by(region) |> 
+  summarise(items_returned = sum(quantity)) |> 
+  ggplot(aes(x = region, y = items_returned)) +
+  geom_col() +
+  labs(x = "Region",
+       y = "Total items returned",
+       title = "Items returned by Region")
+
+# Name of the product that was returned. All of the products were returned less than 5 times.
+Returns |> 
+  inner_join(Orders, by = c("order_id" = "order_id")) |> 
+  group_by(product_name) |> 
+  summarise(items_returned = n()) |> 
+  arrange(desc(items_returned))
+
+# Categories of the products that were returned.
+# Office Supplies is the category which is most often returned.
+Returns |> 
+  inner_join(Orders, by = c("order_id" = "order_id")) |> 
+  group_by(category) |> 
+  summarise(items_returned = n()) |> 
+  arrange(desc(category))
+
+### Sales by Region ---------------------------------------------------------------------------
+Orders |> 
+  group_by(region) |> 
+  summarise(total_profit = sum(profit),
+            total_orders = n(),
+            total_sales = sum(quantity),
+            profit_margin = total_profit / total_sales)
+
+
+### Sales by Ship Mode ------------------------------------------------------------------------
+Orders |> 
+  group_by(ship_mode, category) |> 
+  summarise(total_orders = n()) |> 
+  ggplot(aes(x = ship_mode, y = total_orders)) +
+  geom_col(aes(fill = category), position = "dodge") +
+  scale_fill_manual(values = c("#3A5100", "#51003A", "#003A51")) +
+  labs(x = "Ship Mode",
+       y = "Total Orders",
+       title = "Total Orders by Ship Mode",
+       fill = "Product Category")
+
+ggsave("Orders by Ship Mode.png", path = str_c(getwd(), "/Plots"))
