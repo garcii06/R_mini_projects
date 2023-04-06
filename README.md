@@ -17,6 +17,7 @@ The `Tidyverse` gives you all the flexibility and power to do full projects maki
 The following mini projects are completely available:  
 - [Bob Ross 🎨](#bob-ross-)
 - [Pueblas patrimonial damage 🔥](#pueblas-patrimonial-damage-)
+- [IMDB Crawler 🕷](#imdb-crawler-)
 
 ## 
 ### Bob Ross 🎨  
@@ -28,9 +29,18 @@ Practice of:
  - Transform Data
 
 ### Pueblas patrimonial damage 🔥
-Web scraping and transformation of Pueblas pratrimonial damage since 2021.
-> Complementary data for the `Visualization` mini project using `Power BI`.   [Link](https://github.com/garcii06/Visualization_mini_projects/tree/main/Puebla%20Danios)  
+Web scraping and transformation of Pueblas pratrimonial damage since 2021. [Link](https://github.com/garcii06/Visualization_mini_projects/tree/main/Puebla%20Danios)  
+> Complementary data for the `Visualization` mini project using `Power BI`
 
 Practice of:
  - ETL
  - Web Scraping
+
+### IMDB Crawler 🕷
+Extended the Bob Ross project with an easier way to retrieve information about TV Series in IMDb.  
+The webpage containig all the information and process about this project is available through RPubs, [link](https://rpubs.com/mythchii/imdb) of the project.
+
+Practice of:
+ - Quarto
+ - Functions
+ - Rvest (webscraping)
