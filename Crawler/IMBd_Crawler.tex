@@ -1,0 +1,472 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={IMBd Crawler},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{IMBd Crawler}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+Hello everyone, making \textbf{Quarto} or \textbf{Jupyter} projects will
+help me to show the process of creating \textbf{R} or \textbf{Python}
+projects with the advantage to make them easy to follow.
+
+The following packages will be used for this project, so make sure to
+install them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(rvest)}
+\FunctionTok{library}\NormalTok{(lubridate)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{crawling-through-imdb}{%
+\subsection{Crawling through IMDb}\label{crawling-through-imdb}}
+
+The first part of crawling or scraping through IMDb is to know how IMDb
+gets the information to display it, you can get a general idea from the
+\emph{URL.}
+
+After that, we can break the process of gathering all the information of
+all the seasons into getting the information of one season at the time
+and then loop through the next season until we reach the last one.
+
+Retrieving the information of a single season will be one function, and
+loop through all will be another function that uses the first one.
+
+\begin{quote}
+Having loops making everything can be considered as a bad practice.
+
+Functions are generally used to break a big process into small pieces.
+\end{quote}
+
+\hypertarget{the-url}{%
+\paragraph{The URL}\label{the-url}}
+
+The format to crawl though any TV series in IMDb is:
+
+\begin{quote}
+\textbf{https://www.imdb.com/title/} + \textless{}\textbf{id of the
+series\textgreater{}} + \textbf{episodes?season= + \textless season
+number\textgreater{}}
+\end{quote}
+
+\hypertarget{scraping-single-season}{%
+\subsubsection{Scraping Single Season}\label{scraping-single-season}}
+
+As described above, the first thing to do is crawl and retrieve the
+information only of one season.
+
+This is the function of \emph{season\_data}. It gets the html contents
+for a given series and season.
+
+After that, it parses as text the information about each episode and
+return a tibble containing that information.
+
+\begin{quote}
+Other way to read the statements above is: Get the information about the
+episodes and return a table with that information.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# The function season\_data retrieves the html for a given series and season.}
+\CommentTok{\# After that, it parse as text the information about each episode and return a tibble containing that information.}
+\NormalTok{season\_data }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(season\_url, season\_number)\{}
+\NormalTok{  current\_url }\OtherTok{\textless{}{-}}  \FunctionTok{str\_c}\NormalTok{(season\_url, season\_number)}
+  
+\NormalTok{  season\_serie }\OtherTok{\textless{}{-}} \FunctionTok{read\_html}\NormalTok{(current\_url) }\SpecialCharTok{|\textgreater{}} 
+    \FunctionTok{html\_elements}\NormalTok{(}\StringTok{".list\_item"}\NormalTok{)}
+  
+\NormalTok{  seasons\_episodes }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{(}\AttributeTok{Season =}\NormalTok{ season\_number}
+\NormalTok{                             , }\AttributeTok{episode\_air\_date =}\NormalTok{ season\_serie }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_element}\NormalTok{(}\StringTok{".airdate"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_text2}\NormalTok{()}
+\NormalTok{                             , }\AttributeTok{episode\_name =}\NormalTok{ season\_serie }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_element}\NormalTok{(}\StringTok{"strong"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_text2}\NormalTok{()}
+\NormalTok{                             , }\AttributeTok{episode\_rate =}\NormalTok{ season\_serie }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_element}\NormalTok{(}\StringTok{".ipl{-}rating{-}star\_\_rating"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_text2}\NormalTok{()}
+\NormalTok{                             , }\AttributeTok{episode\_votes =}\NormalTok{ season\_serie }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_element}\NormalTok{(}\StringTok{".ipl{-}rating{-}star\_\_total{-}votes"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_text2}\NormalTok{()}
+\NormalTok{                             , }\AttributeTok{episode\_description =}\NormalTok{ season\_serie }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_element}\NormalTok{(}\StringTok{".item\_description"}\NormalTok{) }\SpecialCharTok{|\textgreater{}} \FunctionTok{html\_text2}\NormalTok{()}
+\NormalTok{  )}
+  
+  \FunctionTok{return}\NormalTok{(seasons\_episodes)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{scraping-all-seasons}{%
+\subsubsection{Scraping All Seasons}\label{scraping-all-seasons}}
+
+Now, we have the general idea of \emph{how to get the information about
+only a single season,} but we need to loop through several seasons. That
+is what \emph{all\_seasons} do, it goes through each season, calls
+\emph{season\_data} until we reach the season we want.
+
+\begin{quote}
+Other way to read the statements above is: Go season through season and
+add it to the table containing all the seasons information.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{all\_seasons }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(url, num\_seasons)\{}
+\NormalTok{  all\_seasons }\OtherTok{\textless{}{-}} \FunctionTok{tibble}\NormalTok{()}
+
+  \ControlFlowTok{for}\NormalTok{(season }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{num\_seasons)\{}
+\NormalTok{    all\_seasons }\OtherTok{\textless{}{-}} \FunctionTok{bind\_rows}\NormalTok{(all\_seasons, }\FunctionTok{season\_data}\NormalTok{(url, season))}
+\NormalTok{  \}}
+
+  \FunctionTok{return}\NormalTok{(all\_seasons)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{examples}{%
+\subsection{Examples}\label{examples}}
+
+Now you can go to IMDb and search for any series, I will show two
+examples of to know series.
+
+\hypertarget{the-joy-of-painting-seasons-1-3}{%
+\paragraph{The Joy of Painting (Seasons
+1-3)}\label{the-joy-of-painting-seasons-1-3}}
+
+The Joy of Painting, can we say anything more that beautiful oil
+paintings on canvas by \textbf{Bob Ross?}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Joy\_Painting }\OtherTok{\textless{}{-}} \FunctionTok{all\_seasons}\NormalTok{(}\StringTok{"https://www.imdb.com/title/tt0383795/episodes?season="}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+
+\NormalTok{Joy\_Painting}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 39 x 6
+   Season episode_air_date episode_name        episode_rate episode_vo~1 episo~2
+    <int> <chr>            <chr>               <chr>        <chr>        <chr>  
+ 1      1 11 Jan. 1983     A Walk in the Woods 9.1          (91)         "Bob R~
+ 2      1 11 Jan. 1983     Mt. McKinley        9.4          (74)         "Bob p~
+ 3      1 18 Jan. 1983     Ebony Sunset        9.2          (62)         "Bob u~
+ 4      1 25 Jan. 1983     Winter Mist         9.2          (56)         "Bob p~
+ 5      1 1 Feb. 1983      Quiet Stream        9.1          (55)         "Bob p~
+ 6      1 8 Feb. 1983      Winter Moon         9.4          (53)         "Anoth~
+ 7      1 15 Feb. 1983     Autumn Mountains    9.4          (49)         "An al~
+ 8      1 22 Feb. 1983     Peaceful Valley     9.4          (48)         "Bob p~
+ 9      1 1 Mar. 1983      Seascape            9.3          (51)         "Bob p~
+10      1 8 Mar. 1983      Mountain Lake       9.4          (50)         "Bob p~
+# ... with 29 more rows, and abbreviated variable names 1: episode_votes,
+#   2: episode_description
+\end{verbatim}
+
+\hypertarget{formula-1-drive-to-surviveseasons-1-5}{%
+\paragraph{Formula 1: Drive to Survive(Seasons
+1-5)}\label{formula-1-drive-to-surviveseasons-1-5}}
+
+\textbf{F1 documentary}, amazing work to know more about the drivers,
+teams, etc. Lots of drama.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{F1\_drive }\OtherTok{\textless{}{-}} \FunctionTok{all\_seasons}\NormalTok{(}\StringTok{"https://www.imdb.com/title/tt8289930/episodes/?season="}\NormalTok{, }\DecValTok{2}\NormalTok{)}
+
+\NormalTok{F1\_drive}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 20 x 6
+   Season episode_air_date episode_name         episode_rate episode_v~1 episo~2
+    <int> <chr>            <chr>                <chr>        <chr>       <chr>  
+ 1      1 8 Mar. 2019      All to Play For      7.8          (1,141)     Driver~
+ 2      1 8 Mar. 2019      The King of Spain    7.7          (998)       Team M~
+ 3      1 8 Mar. 2019      Redemption           8.3          (1,012)     At the~
+ 4      1 8 Mar. 2019      The Art of War       8.1          (940)       The tr~
+ 5      1 8 Mar. 2019      Trouble at the Top   7.6          (862)       A team~
+ 6      1 8 Mar. 2019      All or Nothing       7.8          (874)       When F~
+ 7      1 8 Mar. 2019      Keeping Your Head    7.6          (833)       Perhap~
+ 8      1 8 Mar. 2019      The Next Generation  8.1          (853)       Sauber~
+ 9      1 8 Mar. 2019      Stars and Stripes    7.6          (810)       The bi~
+10      1 8 Mar. 2019      Crossing the Line    7.7          (814)       Driver~
+11      2 28 Feb. 2020     Lights Out           7.6          (860)       The 20~
+12      2 28 Feb. 2020     Boiling Point        7.9          (788)       As med~
+13      2 28 Feb. 2020     Dogfight             7.7          (794)       Carlos~
+14      2 28 Feb. 2020     Dark Days            8.2          (855)       Lewis ~
+15      2 28 Feb. 2020     Great Expectations   7.9          (792)       Red Bu~
+16      2 28 Feb. 2020     Raging Bulls         8.6          (939)       Alex A~
+17      2 28 Feb. 2020     Seeing Red           7.7          (759)       Charle~
+18      2 28 Feb. 2020     Musical Chairs       7.7          (742)       Niko H~
+19      2 28 Feb. 2020     Blood, Sweat & Tears 7.5          (731)       Team W~
+20      2 28 Feb. 2020     Checkered Flag       8.2          (785)       Pierre~
+# ... with abbreviated variable names 1: episode_votes, 2: episode_description
+\end{verbatim}
+
+\hypertarget{data-cleansing}{%
+\subsection{Data Cleansing}\label{data-cleansing}}
+
+If you remember, we scrapped all the data as \emph{text} and we can not
+work at all with this format. We need to clean and transform the data
+into the correct shape and format.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{clean\_seasons }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(seasons\_table)\{}
+\NormalTok{  seasons\_table }\OtherTok{\textless{}{-}}\NormalTok{ seasons\_table }\SpecialCharTok{|\textgreater{}} 
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{episode\_air\_date =} \FunctionTok{dmy}\NormalTok{(episode\_air\_date),}
+           \AttributeTok{episode\_rate =} \FunctionTok{parse\_number}\NormalTok{(episode\_rate),}
+           \AttributeTok{episode\_votes =} \FunctionTok{parse\_number}\NormalTok{(episode\_votes)}
+\NormalTok{           ) }\SpecialCharTok{|\textgreater{}} 
+    \FunctionTok{group\_by}\NormalTok{(Season) }\SpecialCharTok{|\textgreater{}} 
+    \FunctionTok{mutate}\NormalTok{(}\AttributeTok{episode =} \FunctionTok{row\_number}\NormalTok{()) }\SpecialCharTok{|\textgreater{}} 
+    \FunctionTok{select}\NormalTok{(Season, episode, }\FunctionTok{everything}\NormalTok{())}
+  
+  \FunctionTok{return}\NormalTok{(seasons\_table)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{cleansing-the-f1-data}{%
+\subsubsection{Cleansing the F1 data}\label{cleansing-the-f1-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{F1\_drive }\OtherTok{\textless{}{-}} \FunctionTok{clean\_seasons}\NormalTok{(F1\_drive)}
+
+\NormalTok{F1\_drive}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 20 x 7
+# Groups:   Season [2]
+   Season episode episode_air_date episode_name         episod~1 episo~2 episo~3
+    <int>   <int> <date>           <chr>                   <dbl>   <dbl> <chr>  
+ 1      1       1 2019-03-08       All to Play For           7.8    1141 Driver~
+ 2      1       2 2019-03-08       The King of Spain         7.7     998 Team M~
+ 3      1       3 2019-03-08       Redemption                8.3    1012 At the~
+ 4      1       4 2019-03-08       The Art of War            8.1     940 The tr~
+ 5      1       5 2019-03-08       Trouble at the Top        7.6     862 A team~
+ 6      1       6 2019-03-08       All or Nothing            7.8     874 When F~
+ 7      1       7 2019-03-08       Keeping Your Head         7.6     833 Perhap~
+ 8      1       8 2019-03-08       The Next Generation       8.1     853 Sauber~
+ 9      1       9 2019-03-08       Stars and Stripes         7.6     810 The bi~
+10      1      10 2019-03-08       Crossing the Line         7.7     814 Driver~
+11      2       1 2020-02-28       Lights Out                7.6     860 The 20~
+12      2       2 2020-02-28       Boiling Point             7.9     788 As med~
+13      2       3 2020-02-28       Dogfight                  7.7     794 Carlos~
+14      2       4 2020-02-28       Dark Days                 8.2     855 Lewis ~
+15      2       5 2020-02-28       Great Expectations        7.9     792 Red Bu~
+16      2       6 2020-02-28       Raging Bulls              8.6     939 Alex A~
+17      2       7 2020-02-28       Seeing Red                7.7     759 Charle~
+18      2       8 2020-02-28       Musical Chairs            7.7     742 Niko H~
+19      2       9 2020-02-28       Blood, Sweat & Tears      7.5     731 Team W~
+20      2      10 2020-02-28       Checkered Flag            8.2     785 Pierre~
+# ... with abbreviated variable names 1: episode_rate, 2: episode_votes,
+#   3: episode_description
+\end{verbatim}
+
+\hypertarget{whats-next}{%
+\subsection{What's Next?}\label{whats-next}}
+
+Now, the information about all our seasons is clean and ready to be
+upload to a database, csv file, Excel file or any other file extension
+format.
+
+Other things to improve is to allow the users type the name of the
+series and return the id of the series, maybe with \textbf{RSelenium} or
+similar packages.
+
+Have fun!.
+
+
+
+\end{document}
