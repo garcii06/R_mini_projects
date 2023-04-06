@@ -1,0 +1,141 @@
+---
+title: "IMBd Crawler"
+format: html
+editor: visual
+---
+
+Hello everyone, making **Quarto** or **Jupyter** projects will help me to show the process of creating **R** or **Python** projects with the advantage to make them easy to follow.
+
+The following packages will be used for this project, so make sure to install them.
+
+```{r message = FALSE, warning = FALSE}
+library(rvest)
+library(lubridate)
+library(tidyverse)
+```
+
+## Crawling through IMDb
+
+The first part of crawling or scraping through IMDb is to know how IMDb gets the information to display it, you can get a general idea from the *URL.*
+
+After that, we can break the process of gathering all the information of all the seasons into getting the information of one season at the time and then loop through the next season until we reach the last one.
+
+Retrieving the information of a single season will be one function, and loop through all will be another function that uses the first one.
+
+> Having loops making everything can be considered as a bad practice.
+>
+> Functions are generally used to break a big process into small pieces.
+
+#### The URL
+
+The format to crawl though any TV series in IMDb is:
+
+> **https://www.imdb.com/title/** + \<**id of the series\>** + **episodes?season= + \<season number\>**
+
+### Scraping Single Season
+
+As described above, the first thing to do is crawl and retrieve the information only of one season.
+
+This is the function of *season_data*. It gets the html contents for a given series and season.
+
+After that, it parses as text the information about each episode and return a tibble containing that information.
+
+> Other way to read the statements above is: Get the information about the episodes and return a table with that information.
+
+```{r}
+# The function season_data retrieves the html for a given series and season.
+# After that, it parse as text the information about each episode and return a tibble containing that information.
+season_data <- function(season_url, season_number){
+  current_url <-  str_c(season_url, season_number)
+  
+  season_serie <- read_html(current_url) |> 
+    html_elements(".list_item")
+  
+  seasons_episodes <- tibble(Season = season_number
+                             , episode_air_date = season_serie |> html_element(".airdate") |> html_text2()
+                             , episode_name = season_serie |> html_element("strong") |> html_text2()
+                             , episode_rate = season_serie |> html_element(".ipl-rating-star__rating") |> html_text2()
+                             , episode_votes = season_serie |> html_element(".ipl-rating-star__total-votes") |> html_text2()
+                             , episode_description = season_serie |> html_element(".item_description") |> html_text2()
+  )
+  
+  return(seasons_episodes)
+}
+```
+
+### Scraping All Seasons
+
+Now, we have the general idea of *how to get the information about only a single season,* but we need to loop through several seasons. That is what *all_seasons* do, it goes through each season, calls *season_data* until we reach the season we want.
+
+> Other way to read the statements above is: Go season through season and add it to the table containing all the seasons information.
+
+```{r}
+all_seasons <- function(url, num_seasons){
+  all_seasons <- tibble()
+
+  for(season in 1:num_seasons){
+    all_seasons <- bind_rows(all_seasons, season_data(url, season))
+  }
+
+  return(all_seasons)
+}
+```
+
+## Examples
+
+Now you can go to IMDb and search for any series, I will show two examples of to know series.
+
+#### The Joy of Painting (Seasons 1-3)
+
+The Joy of Painting, can we say anything more that beautiful oil paintings on canvas by **Bob Ross?**
+
+```{r}
+Joy_Painting <- all_seasons("https://www.imdb.com/title/tt0383795/episodes?season=", 3)
+
+Joy_Painting
+```
+
+#### Formula 1: Drive to Survive(Seasons 1-5)
+
+**F1 documentary**, amazing work to know more about the drivers, teams, etc. Lots of drama.
+
+```{r}
+F1_drive <- all_seasons("https://www.imdb.com/title/tt8289930/episodes/?season=", 2)
+
+F1_drive
+```
+
+## Data Cleansing
+
+If you remember, we scrapped all the data as *text* and we can not work at all with this format. We need to clean and transform the data into the correct shape and format.
+
+```{r}
+clean_seasons <- function(seasons_table){
+  seasons_table <- seasons_table |> 
+    mutate(episode_air_date = dmy(episode_air_date),
+           episode_rate = parse_number(episode_rate),
+           episode_votes = parse_number(episode_votes)
+           ) |> 
+    group_by(Season) |> 
+    mutate(episode = row_number()) |> 
+    select(Season, episode, everything())
+  
+  return(seasons_table)
+}
+```
+
+### Cleansing the F1 data
+
+```{r}
+F1_drive <- clean_seasons(F1_drive)
+
+F1_drive
+```
+
+## What's Next?
+
+Now, the information about all our seasons is clean and ready to be upload to a database, csv file, Excel file or any other file extension format.
+
+Other things to improve is to allow the users type the name of the series and return the id of the series, maybe with **RSelenium** or similar packages.
+
+Have fun!.
